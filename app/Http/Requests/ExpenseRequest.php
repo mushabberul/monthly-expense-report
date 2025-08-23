@@ -28,4 +28,11 @@ class ExpenseRequest extends FormRequest
             'date' => 'bail|required|date|before_or_equal:today'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'category_id' => 'The category field is required.'
+        ];
+    }
 }
