@@ -23,8 +23,8 @@
                                     <th scope="col">Category</th>
                                     <th scope="col">Title</th>
                                     <th scope="col">Amount</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Expense Date</th>
+                                    <th scope="col" class="text-center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,7 +33,7 @@
                                         <th scope="row">{{ $key + 1 }}</th>
                                         <td>{{ $expense->category->name }}</td>
                                         <td>{{ $expense->title }}</td>
-                                        <td>{{ $expense->amount }}</td>
+                                        <td>৳ {{ $expense->amount }}</td>
                                         <td>{{ $expense->date->format('d M, Y') }}</td>
                                         <td>
                                             <div class="d-flex justify-content-end gap-2">
@@ -55,9 +55,9 @@
                                     </tr>
                                 @endforelse
 
-
                             </tbody>
                         </table>
+                        <div>{{ $expenses->links() }}</div>
                     </div>
                 </div>
             </div>

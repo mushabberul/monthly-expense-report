@@ -23,12 +23,12 @@
                                 @foreach ($expenses as $expense)
                                     <tr>
                                         <td>{{ $expense->category->name }}</td>
-                                        <td class="text-end">{{ $expense->total }}</td>
+                                        <td class="text-end">৳ {{ $expense->total }}</td>
                                     </tr>
                                 @endforeach
                                 <tr class="fw-bold bg-light">
                                     <td>Total</td>
-                                    <td class="text-end">{{ number_format($total, 2) }}</td>
+                                    <td class="text-end">৳ {{ number_format($total, 2) }}</td>
                                 </tr>
                             </tbody>
                         </table>

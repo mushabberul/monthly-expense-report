@@ -19,7 +19,7 @@ class ExpenseController extends Controller
         $expenses = Expense::auth()
             ->with('category')
             ->latest()
-            ->get();
+            ->paginate(12);
 
         return view('pages.expense.index', compact('expenses'));
     }
@@ -82,7 +82,7 @@ class ExpenseController extends Controller
         return redirect()->route('expenses.index');
     }
 
-    private function saveExpense($request, $expense): void
+    private function saveExpense(Request $request, Expense $expense): void
     {
         $expense->category_id = $request->category_id;
         $expense->title = $request->title;
