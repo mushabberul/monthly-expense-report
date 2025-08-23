@@ -1,4 +1,4 @@
-# Expense Tracker with Monthly Report
+# Expense Tracker
 
 ## Follow the step for running project
 

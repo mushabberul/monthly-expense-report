@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', isset($expense) ? 'Edit Expense' : 'Create Expense')
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
